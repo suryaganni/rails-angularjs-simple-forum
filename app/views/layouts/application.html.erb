@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="app">
 <head>
   <title>RailsAngularjsSimpleForum</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">Simple-Forum</a>
+      </div>
+    </div>
+    <div id="loading"><b>Loading...</b></div>
+  </div>
+  <div class="container">
+    <div ng-view="ng-view"></div>
+  </div>
 </body>
 </html>
